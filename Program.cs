@@ -7,10 +7,8 @@ namespace GetAllSCMWaits
     using System.IO;
     using System.Text.RegularExpressions;
 
-    class Program
-    {
-        static void Main()
-        {
+    class Program {
+        static void Main() {
             // Path to your SCM file
             string inputfile = "F:\\Speedrun\\Grand Theft Auto San Andreas 1.01\\Useful Documents\\Decompiled Mission Script GTA SA By GTAG (with local offsets).txt";
 
@@ -18,6 +16,7 @@ namespace GetAllSCMWaits
             string outputfile = "D:\\Dev\\C#\\GetAllSCMWaits\\output\\output.txt";
 
             try {
+                //Calls the procedures of the application
                 List<int> waitsoffsets = ExtractWaitsOffsets(inputfile, "} 0001: wait");
                 if (waitsoffsets.Count > 0) {
                     WriteNumbersToFile(outputfile, waitsoffsets);
@@ -55,26 +54,29 @@ namespace GetAllSCMWaits
         // Procedure to extract the wait and the next instruction offsets numbers from the SCM File
         static List<int> ExtractWaitsOffsets(string filePath, string searchString) {
             List<int> offsets = new List<int>();
-            // Read the SCM File from the line of the wait offset
             using (StreamReader reader = new StreamReader(filePath)) {
+                // Reads the line of the wait offset
                 string line;
                 while ((line = reader.ReadLine()) != null) {
                     if (line.Contains(searchString)) {
-                        // Use a regular expression to find all numbers
-                        MatchCollection matches = Regex.Matches(line, @"\b\d+\b");
+                        // Use a regular expression to find all numbers of the line
+                        MatchCollection matcheswais = Regex.Matches(line, @"\b\d+\b");
 
                         // Convert and add each matched number to the list
-                        foreach (Match match in matches) {
+                        foreach (Match match in matcheswais) {
                             if (int.TryParse(match.Value, out int number)) {
                                 offsets.Add(number);
                             }
                         }
+
+                        //Reads the line of the next instruction of the wait offset
                         string nextLine = reader.ReadLine();
-                        // Use a regular expression to find all numbers
-                        MatchCollection matches2 = Regex.Matches(nextLine, @"\b\d+\b");
+
+                        // Use a regular expression to find all numbers of the line
+                        MatchCollection matchesnext = Regex.Matches(nextLine, @"\b\d+\b");
 
                         // Convert and add each matched number to the list
-                        foreach (Match match in matches2) {
+                        foreach (Match match in matchesnext) {
                             if (int.TryParse(match.Value, out int number)) {
                                 offsets.Add(number);
                             }
@@ -84,6 +86,7 @@ namespace GetAllSCMWaits
             }
             return offsets;
         }
+        //Procedure to Write the ouput file with the offsets numbers from the SCM File
         static void WriteNumbersToFile(string filePath, List<int> numbers) {
             using (StreamWriter writer = new StreamWriter(filePath)) {
                 foreach (int number in numbers) {
