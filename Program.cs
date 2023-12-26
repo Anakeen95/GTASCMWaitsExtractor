@@ -48,7 +48,7 @@
                 Console.WriteLine("An error occurred: " + e.Message);
             }
         }
-        // Procedure to extract the wait and the next instruction offsets numbers from the SCM File
+        // Procedure to extract the waits and the next instruction of the waits offsets numbers from the SCM File
         static List<int> ExtractWaitsOffsets(string filePath, string searchString) {
             List<int> offsets = new List<int>();
             using (StreamReader reader = new StreamReader(filePath)) {
