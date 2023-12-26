@@ -1,7 +1,4 @@
-﻿using System;
-
-namespace GetAllSCMWaits
-{
+﻿namespace GetAllSCMWaits {
     using System;
     using System.Collections.Generic;
     using System.IO;
