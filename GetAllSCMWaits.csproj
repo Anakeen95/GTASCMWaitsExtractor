@@ -5,4 +5,30 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="inputfiles\III_main_1.1.txt" />
+    <None Remove="inputfiles\SA_main_1.0.txt" />
+    <None Remove="inputfiles\VC_main_INTL.txt" />
+    <None Remove="inputfiles\VC_main_JP.txt" />
+    <None Remove="output\output.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="inputfiles\III_main_1.1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputfiles\SA_main_1.0.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputfiles\VC_main_INTL.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inputfiles\VC_main_JP.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="output\output.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
