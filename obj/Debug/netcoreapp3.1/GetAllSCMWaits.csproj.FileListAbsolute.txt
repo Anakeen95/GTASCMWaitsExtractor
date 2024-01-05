@@ -1,0 +1,16 @@
+D:\Dev\C#\GetAllSCMWaits\bin\Debug\netcoreapp3.1\GetAllSCMWaits.exe
+D:\Dev\C#\GetAllSCMWaits\bin\Debug\netcoreapp3.1\GetAllSCMWaits.deps.json
+D:\Dev\C#\GetAllSCMWaits\bin\Debug\netcoreapp3.1\GetAllSCMWaits.runtimeconfig.json
+D:\Dev\C#\GetAllSCMWaits\bin\Debug\netcoreapp3.1\GetAllSCMWaits.runtimeconfig.dev.json
+D:\Dev\C#\GetAllSCMWaits\bin\Debug\netcoreapp3.1\GetAllSCMWaits.dll
+D:\Dev\C#\GetAllSCMWaits\bin\Debug\netcoreapp3.1\GetAllSCMWaits.pdb
+D:\Dev\C#\GetAllSCMWaits\obj\Debug\netcoreapp3.1\GetAllSCMWaits.csprojAssemblyReference.cache
+D:\Dev\C#\GetAllSCMWaits\obj\Debug\netcoreapp3.1\GetAllSCMWaits.AssemblyInfoInputs.cache
+D:\Dev\C#\GetAllSCMWaits\obj\Debug\netcoreapp3.1\GetAllSCMWaits.AssemblyInfo.cs
+D:\Dev\C#\GetAllSCMWaits\obj\Debug\netcoreapp3.1\GetAllSCMWaits.dll
+D:\Dev\C#\GetAllSCMWaits\obj\Debug\netcoreapp3.1\GetAllSCMWaits.pdb
+D:\Dev\C#\GetAllSCMWaits\bin\Debug\netcoreapp3.1\inputfiles\III_main_1.1.txt
+D:\Dev\C#\GetAllSCMWaits\bin\Debug\netcoreapp3.1\inputfiles\SA_main_1.0.txt
+D:\Dev\C#\GetAllSCMWaits\bin\Debug\netcoreapp3.1\inputfiles\VC_main_INTL.txt
+D:\Dev\C#\GetAllSCMWaits\bin\Debug\netcoreapp3.1\inputfiles\VC_main_JP.txt
+D:\Dev\C#\GetAllSCMWaits\bin\Debug\netcoreapp3.1\output\output.txt
