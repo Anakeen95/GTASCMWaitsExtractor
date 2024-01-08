@@ -3,12 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetAllSCMWaits", "GetAllSCMWaits.csproj", "{13F8F56B-B565-472E-8AC9-4332AC5D5ED1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetAllSCMWaits", "GetAllSCMWaits.csproj", "{13F8F56B-B565-472E-8AC9-4332AC5D5ED1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+		Description = Console Application that gets all the waits and the next instruction of the waits offsets from the Main.scm file from GTA Games.
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{13F8F56B-B565-472E-8AC9-4332AC5D5ED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

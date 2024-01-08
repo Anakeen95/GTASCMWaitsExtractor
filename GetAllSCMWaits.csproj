@@ -3,6 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <StartupObject>GetAllSCMWaits.Program</StartupObject>
+    <ApplicationIcon>gta icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
