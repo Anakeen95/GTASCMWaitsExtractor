@@ -44,21 +44,129 @@
                     switch (choice) {
                         case 1:
                             Console.Clear();
-                            Console.WriteLine("You selected Option 1.");
-                            // Pause to allow the user to read the message
-                            Console.ReadLine(); 
+                            Console.WriteLine("You selected the option 1 (Get the Waits Offsets from GTA III).");
+                            Console.WriteLine("");
+                            Console.WriteLine("Press any key to continue....");
+                            Console.ReadLine();
+                            Console.WriteLine("Proceeding to count and extract the waits offsets from the GTA III Main SCM...");
+                            Thread.Sleep(3000);
+
+                            // Path to your SCM file
+                            string iiiinputfile = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"inputfiles\III_main_1.1.txt");  
+
+                            // Path to your output file
+                            string iiioutputfile = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"output\output.txt");
+
+                            try {
+                                // Calls the procedures and functions of the application to work with the files
+                                List<OffsetData> iiiwaitsoffsets = ExtractWaitsOffsets(iiiinputfile, "} 0001: wait");
+                                if (iiiwaitsoffsets.Count > 0) {
+                                    WriteOffsetsToFile(iiioutputfile, iiiwaitsoffsets, iiiinputfile, "} 0001: wait");
+                                    Console.WriteLine("");
+                                    int iiiwaits = WaitsCounter(iiiinputfile, "} 0001: wait");
+                                    Console.WriteLine($"{iiiwaits} waits found in the III SCM.");
+                                    Console.WriteLine("");
+                                    Console.WriteLine("Extracting the Wait Offsets and the Next Instruction from the input file...");
+                                    Thread.Sleep(3000);
+                                    Console.WriteLine("");
+                                    Console.WriteLine("Wait Offsets extracted and written to the output file successfully.");
+                                    Console.WriteLine("");
+                                    Console.WriteLine("Press any key to continue....");
+                                    Console.ReadLine();
+                                    Console.WriteLine("Opening the outputfile with all the data obtained...");
+                                    Thread.Sleep(3000);
+                                    Process.Start("notepad.exe", iiioutputfile);
+                                    goto MainMenu;
+                                }
+                            }
+                            catch (Exception e) {
+                                Console.WriteLine("An error occurred: " + e.Message);
+                                goto MainMenu;
+                            }
                             goto MainMenu;
                         case 2:
                             Console.Clear();
-                            Console.WriteLine("You selected Option 2.");
-                            // Pause to allow the user to read the message
-                            Console.ReadLine(); 
+                            Console.WriteLine("You selected the option 1 (Get the Waits Offsets from GTA VC International).");
+                            Console.WriteLine("");
+                            Console.WriteLine("Press any key to continue....");
+                            Console.ReadLine();
+                            Console.WriteLine("Proceeding to count and extract the waits offsets from the GTA VC International Main SCM...");
+                            Thread.Sleep(3000);
+
+                            // Path to your SCM file
+                            string vcintinputfile = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"inputfiles\VC_main_INTL.txt");
+
+                            // Path to your output file
+                            string vcintoutputfile = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"output\output.txt");
+
+                            try {
+                                // Calls the procedures and functions of the application to work with the files
+                                List<OffsetData> vcintwaitsoffsets = ExtractWaitsOffsets(vcintinputfile, "} 0001: wait");
+                                if (vcintwaitsoffsets.Count > 0) {
+                                    WriteOffsetsToFile(vcintoutputfile, vcintwaitsoffsets, vcintinputfile, "} 0001: wait");
+                                    Console.WriteLine("");
+                                    int vcintwaits = WaitsCounter(vcintinputfile, "} 0001: wait");
+                                    Console.WriteLine($"{vcintwaits} waits found in the VC INT SCM.");
+                                    Console.WriteLine("");
+                                    Console.WriteLine("Extracting the Wait Offsets and the Next Instruction from the input file...");
+                                    Thread.Sleep(3000);
+                                    Console.WriteLine("");
+                                    Console.WriteLine("Wait Offsets extracted and written to the output file successfully.");
+                                    Console.WriteLine("");
+                                    Console.WriteLine("Press any key to continue....");
+                                    Console.ReadLine();
+                                    Console.WriteLine("Opening the outputfile with all the data obtained...");
+                                    Thread.Sleep(3000);
+                                    Process.Start("notepad.exe", vcintoutputfile);
+                                    goto MainMenu;
+                                }
+                            }
+                            catch (Exception e) {
+                                Console.WriteLine("An error occurred: " + e.Message);
+                                goto MainMenu;
+                            }
                             goto MainMenu;
                         case 3:
                             Console.Clear();
-                            Console.WriteLine("You selected Option 3.");
-                            // Pause to allow the user to read the message
-                            Console.ReadLine(); 
+                            Console.WriteLine("You selected the option 3 (Get the Waits Offsets from GTA VC Japanese).");
+                            Console.WriteLine("");
+                            Console.WriteLine("Press any key to continue....");
+                            Console.ReadLine();
+                            Console.WriteLine("Proceeding to count and extract the waits offsets from the GTA VC Japanese Main SCM...");
+                            Thread.Sleep(3000);
+
+                            // Path to your SCM file
+                            string vcjpinputfile = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"inputfiles\VC_main_JP.txt");
+
+                            // Path to your output file
+                            string vcjpoutputfile = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"output\output.txt");
+
+                            try {
+                                // Calls the procedures and functions of the application to work with the files
+                                List<OffsetData> vcjpwaitsoffsets = ExtractWaitsOffsets(vcjpinputfile, "} 0001: wait");
+                                if (vcjpwaitsoffsets.Count > 0) {
+                                    WriteOffsetsToFile(vcjpoutputfile, vcjpwaitsoffsets, vcjpinputfile, "} 0001: wait");
+                                    Console.WriteLine("");
+                                    int vcjpwaits = WaitsCounter(vcjpinputfile, "} 0001: wait");
+                                    Console.WriteLine($"{vcjpwaits} waits found in the VC JP SCM.");
+                                    Console.WriteLine("");
+                                    Console.WriteLine("Extracting the Wait Offsets and the Next Instruction from the input file...");
+                                    Thread.Sleep(3000);
+                                    Console.WriteLine("");
+                                    Console.WriteLine("Wait Offsets extracted and written to the output file successfully.");
+                                    Console.WriteLine("");
+                                    Console.WriteLine("Press any key to continue....");
+                                    Console.ReadLine();
+                                    Console.WriteLine("Opening the outputfile with all the data obtained...");
+                                    Thread.Sleep(3000);
+                                    Process.Start("notepad.exe", vcjpoutputfile);
+                                    goto MainMenu;
+                                }
+                            }
+                            catch (Exception e) {
+                                Console.WriteLine("An error occurred: " + e.Message);
+                                goto MainMenu;
+                            }
                             goto MainMenu;
                         case 4:
                             Console.Clear();
@@ -70,19 +178,18 @@
                             Thread.Sleep(3000);
 
                             // Path to your SCM file
-                            string inputfile = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"inputfiles\SA_main_1.0.txt"); //"D:\\Dev\\C#\\GetAllSCMWaits\\inputfiles\\test.txt";   
+                            string sainputfile = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"inputfiles\SA_main_1.0.txt");  
 
-                            // Path to your output fileSA_main_1.0
-                            string outputfile = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"output\output.txt");
+                            // Path to your output file
+                            string saoutputfile = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"output\output.txt");
 
                             try {
-                                // Calls the procedures of the application to work with the files
-                                List<OffsetData> sawaitsoffsets = ExtractWaitsOffsets(inputfile, "} 0001: wait");
-                                //List<int> sawaitsoffsets = 
+                                // Calls the procedures and functions of the application to work with the files
+                                List<OffsetData> sawaitsoffsets = ExtractWaitsOffsets(sainputfile, "} 0001: wait");
                                 if (sawaitsoffsets.Count > 0) {
-                                    WriteNumbersToFile(outputfile, sawaitsoffsets);
+                                    WriteOffsetsToFile(saoutputfile, sawaitsoffsets, sainputfile, "} 0001: wait");
                                     Console.WriteLine("");
-                                    int sawaits = WaitsCounter(inputfile, "} 0001: wait");
+                                    int sawaits = WaitsCounter(sainputfile, "} 0001: wait");
                                     Console.WriteLine($"{sawaits} waits found in the SA SCM.");
                                     Console.WriteLine("");
                                     Console.WriteLine("Extracting the Wait Offsets and the Next Instruction from the input file...");
@@ -94,7 +201,7 @@
                                     Console.ReadLine();
                                     Console.WriteLine("Opening the outputfile with all the data obtained...");
                                     Thread.Sleep(3000);
-                                    Process.Start("notepad.exe", outputfile);
+                                    Process.Start("notepad.exe", saoutputfile);
                                     goto MainMenu;
                                 }
                             }
@@ -203,16 +310,19 @@
             return 0; 
         }
         // Procedure to Write the ouput file with the offsets numbers from the SCM File as a table
-        static void WriteNumbersToFile(string filePath, List<OffsetData> numbers) {
+        static void WriteOffsetsToFile(string filePath, List<OffsetData> numbers, string filePath2, string searchString) {
             using (StreamWriter writer = new StreamWriter(filePath)) {
                 // Write table headers
+                int scmwaits = WaitsCounter(filePath2, searchString);
+                writer.WriteLine($"There are {scmwaits} waits in the SCM selected, which are the following: ");
+                writer.WriteLine("");
                 writer.WriteLine("-----------------------------------\t-----------------------------------\t-----------------------------\t----------------------------\t-----------------------------\t----------------------------\t------------------");
                 writer.WriteLine("Thread Scripts Waits Global Offsets\tThread Scripts Nexts Global Offsets\tMissions Waits Global Offsets\tMissions Waits Local Offsets\tMissions Nexts Global Offsets\tMissions Nexts Local Offsets\tWaits Milliseconds");
                 writer.WriteLine("----------------------------------- \t-----------------------------------\t-----------------------------\t----------------------------\t-----------------------------\t----------------------------\t------------------");
 
                 // Write numbers in a tabular format
                 foreach (var row in numbers) {
-                    writer.WriteLine($"{row.ThreadScriptsWaitGlobalOffset,-34}|\t{row.ThreadScriptsNextGlobalOffset,-34}|\t{row.MissionsWaitGlobalOffset,- 28}|\t{row.MissionsWaitLocalOffset,-27}|\t{row.MissionsNextGlobalOffset,-28}|\t{row.MissionsNextLocalOffset,-27}|\t{row.WaitMilliseconds,-28}");
+                    writer.WriteLine($"{row.ThreadScriptsWaitGlobalOffset,-34}|\t{row.ThreadScriptsNextGlobalOffset,-34}|\t{row.MissionsWaitGlobalOffset,- 28}|\t{row.MissionsWaitLocalOffset,-27}|\t{row.MissionsNextGlobalOffset,-28}|\t{row.MissionsNextLocalOffset,-27}|\t{row.WaitMilliseconds,-17}|\t");
                 }
             }
         }
@@ -226,7 +336,7 @@
 
                 // Count occurrences in each line
                 foreach (string line in lines) {
-                    count += WaitCounterInLine(line, searchString);
+                    count += WaitsCounterInLine(line, searchString);
                 }
             }
             catch (Exception e) {
@@ -235,7 +345,7 @@
             return count;
         }
         // Function to Count how many waits are in the SCM File by Line
-        static int WaitCounterInLine(string line, string searchString) {
+        static int WaitsCounterInLine(string line, string searchString) {
             int count = 0;
             int index = -1;
 
